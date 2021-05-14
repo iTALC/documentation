@@ -9,4 +9,3 @@ Veyon User Manual
 	faq
 	glossary
 
-* :ref:`genindex`

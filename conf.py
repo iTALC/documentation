@@ -58,20 +58,23 @@ latex_elements = {
     #
     # 'figure_align': 'htbp',
     'preamble': r'''
-\usepackage{libertine}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\huge}
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
 \usepackage[protrusion=true,babel=true,shrink=10,stretch=10]{microtype}
 \fancypagestyle{normal}{
        \fancyhf{}
        \fancyfoot[LE,RO]{{\thepage}}
-       \fancyfoot[LO,RE]{\nouppercase{%s %s}}
+       \fancyfoot[LO,RE]{\nouppercase{M@school-Veyon\_Benutzerhandbuch\_V.4.4.2.pdf}}
        \fancyhead[LE]{{\nouppercase\leftmark}}
        \fancyhead[RO]{{\nouppercase\rightmark}}
 }
-''' % ( title, version ),
+''' % (),
     'babel': '\\usepackage[%s]{babel}' % (os.getenv('BABEL', 'USenglish')),
+    'maketitle': '',
     'fontpkg': r'''
-%\setmainfont[BoldFont={Linux Libertine O},ItalicFont={Linux Libertine O}]{Linux Libertine O}
-%\setsansfont[BoldFont={Linux Libertine O},ItalicFont={Linux Libertine O}]{Linux Libertine O}
+\setmainfont[BoldFont={Tele-GroteskFet},ItalicFont={Tele-GroteskHal}]{Tele-GroteskNor}
+\setsansfont[BoldFont={Tele-GroteskFet},ItalicFont={Tele-GroteskHal}]{Tele-GroteskNor}
 ''',
 }
 
