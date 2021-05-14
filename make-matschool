@@ -1,0 +1,24 @@
+#!/bin/sh
+
+git checkout locale conf.py $(find -name "*.rst")
+
+sed -i conf.py -e "s/'Veyon'/'M@school Veyon'/g"
+sed -i conf.py -e "s/school Veyon-/school Veyon /g"
+
+for i in locale/de/LC_MESSAGES/*.po ; do
+    sed -i $i -e "s/Veyon/M\\\\\\\\@school Veyon/g"
+	sed -i $i -e "s/school Veyon-/school Veyon /g"
+done
+
+for i in $(find -name "*.rst") ; do
+    sed -i $i -e "s/:scale: 20%/:scale: 75%/g"
+    sed -i $i -e "s/Veyon/M\\\\@school Veyon/g"
+	sed -i $i -e "s/school Veyon-/school Veyon /g"
+done
+
+make gettext
+
+./create-user-manual-de.py
+
+pdftk deckblatt.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch_V.4.4.2.pdf
+
