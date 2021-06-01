@@ -25,7 +25,7 @@ copyright = '2017-2021, Veyon Solutions'
 author = 'Veyon Community'
 
 title = os.getenv('TITLE', 'Veyon Documentation')
-version = os.getenv('VERSION', '4.4.2')
+version = os.getenv('VERSION', '4.4.3')
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -65,7 +65,7 @@ latex_elements = {
 \fancypagestyle{normal}{
        \fancyhf{}
        \fancyfoot[LE,RO]{{\thepage}}
-       \fancyfoot[LO,RE]{\nouppercase{M@school-Veyon\_Benutzerhandbuch\_V.4.4.2.pdf}}
+       \fancyfoot[LO,RE]{\nouppercase{M@school-Veyon\_Benutzerhandbuch\_V.4.4.3.pdf}}
        \fancyhead[LE]{{\nouppercase\leftmark}}
        \fancyhead[RO]{{\nouppercase\rightmark}}
 }

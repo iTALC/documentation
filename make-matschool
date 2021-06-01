@@ -20,5 +20,5 @@ make gettext
 
 ./create-user-manual-de.py
 
-pdftk deckblatt.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch_V.4.4.2.pdf
+pdftk deckblatt.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch_V.4.4.3.pdf
 
