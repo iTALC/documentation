@@ -20,5 +20,10 @@ make gettext
 
 ./create-user-manual-de.py
 
-pdftk deckblatt.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch_V.4.4.3.pdf
+pdftk ~/LHM/Handbücher/Deckblatt_M@School-Veyon_Benutzerhandbuch-4.4.3.pdf cat 2 output /tmp/2.pdf
+pdftk ~/LHM/Handbücher/Deckblatt_M@School-Veyon_Benutzerhandbuch-4.4.3-LHMS-Kontaktdaten.pdf cat 3 output /tmp/3.pdf
+pdftk ~/LHM/Handbücher/Deckblatt_M@School-Veyon_Benutzerhandbuch-LHMS-4.4.3.pdf /tmp/2.pdf /tmp/3.pdf cat output /tmp/deckblatt-lhms.pdf
+
+pdftk ~/LHM/Handbücher/Deckblatt_M@School-Veyon_Benutzerhandbuch-4.4.3.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch_V.4.4.3.pdf
+pdftk /tmp/deckblatt-lhms.pdf veyon-user-manual-de_*.pdf cat output M@school-Veyon_Benutzerhandbuch-LHMS_V.4.4.3.pdf
 
